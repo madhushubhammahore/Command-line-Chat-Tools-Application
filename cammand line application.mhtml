@@ -1,0 +1,2823 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://pymbook.readthedocs.io/en/latest/click.html#using-echo-for-printing-text
+Subject: =?utf-8?Q?Building=20command=20line=20applications=20with=20Click=20=E2?=
+ =?utf-8?Q?=80=94=20Python=20for=20you=20and=20me=200.5.beta1=20documentat?=
+ =?utf-8?Q?ion?=
+Date: Tue, 1 Nov 2022 08:11:15 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----"
+
+
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/html
+Content-ID: <frame-37D010645293419F05F80978EC88A846@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pymbook.readthedocs.io/en/latest/click.html#using-echo-for-printing-text
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" lang=3D"en" class=3D"medium-up-screen"><head><meta http-equ=
+iv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+   =20
+    <title>Building command line applications with Click =E2=80=94 Python f=
+or you and me 0.5.beta1 documentation</title>
+    <link rel=3D"stylesheet" href=3D"https://pymbook.readthedocs.io/en/late=
+st/_static/cloud.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"https://pymbook.readthedocs.io/en/late=
+st/_static/pygments.css" type=3D"text/css">
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://pymbook.read=
+thedocs.io/_/static/css/badge_only.css">
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://fonts.google=
+apis.com/css?family=3DNoticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+M=
+ono:400,i,b,bi&amp;display=3Dswap">
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+    =20
+       =20
+   =20
+
+   =20
+    =20
+       =20
+   =20
+
+   =20
+    =20
+       =20
+   =20
+
+    <link rel=3D"canonical" href=3D"https://pymbook.readthedocs.io/en/lates=
+t/click.html">
+    <link rel=3D"index" title=3D"Index" href=3D"https://pymbook.readthedocs=
+.io/en/latest/genindex.html">
+    <link rel=3D"search" title=3D"Search" href=3D"https://pymbook.readthedo=
+cs.io/en/latest/search.html">
+    <link rel=3D"next" title=3D"Simple GUI application development using Py=
+perCard" href=3D"https://pymbook.readthedocs.io/en/latest/pypercard.html">
+    <link rel=3D"prev" title=3D"A project structure" href=3D"https://pymboo=
+k.readthedocs.io/en/latest/projectstructure.html">=20
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+ =20
+<!-- RTD Extra Head -->
+
+<link rel=3D"stylesheet" href=3D"https://pymbook.readthedocs.io/_/static/cs=
+s/readthedocs-doc-embed.css" type=3D"text/css">
+
+
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+
+
+
+
+<!-- end RTD <extrahead> -->
+</head><body>
+    <div class=3D"relbar-top">
+       =20
+    <div class=3D"related" role=3D"navigation" aria-label=3D"related naviga=
+tion">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/genindex.html=
+" title=3D"General Index" accesskey=3D"I">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/pypercard.htm=
+l" title=3D"Simple GUI application development using PyperCard" accesskey=
+=3D"N">next</a> &nbsp; &nbsp;</li>
+        <li class=3D"right">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/projectstruct=
+ure.html" title=3D"A project structure" accesskey=3D"P">previous</a> &nbsp;=
+ &nbsp;</li>
+    <li><a href=3D"https://pymbook.readthedocs.io/en/latest/index.html">Pyt=
+hon for you and me 0.5.beta1 documentation</a> =C2=BB</li>
+=20
+      </ul>
+    </div>
+    </div>
+ =20
+
+    <div class=3D"document">
+      <div class=3D"documentwrapper">
+        <div class=3D"bodywrapper">
+          <div class=3D"body" role=3D"main">
+           =20
+  <div class=3D"section" id=3D"building-command-line-applications-with-clic=
+k">
+<h1>Building command line applications with Click<a class=3D"headerlink" hr=
+ef=3D"https://pymbook.readthedocs.io/en/latest/click.html#building-command-=
+line-applications-with-click" title=3D"Permalink to this headline">=C2=B6</=
+a></h1>
+<p>I recommend <a class=3D"reference external" href=3D"http://click.pocoo.o=
+rg/">click</a>
+module to build command line applications. Like any other project from <a c=
+lass=3D"reference external" href=3D"http://lucumr.pocoo.org/about/">Armin
+Ronacher</a>, it has great documentation. In this
+post, I am going to write a beginners tutorial, you should the read the
+documentation for any more details and examples.</p>
+<div class=3D"section" id=3D"installation-and-development-tips">
+<h2>Installation, and development tips<a class=3D"headerlink" href=3D"https=
+://pymbook.readthedocs.io/en/latest/click.html#installation-and-development=
+-tips" title=3D"Permalink to this headline">=C2=B6</a></h2>
+<p>Using virtualenv is highly recommended for developing =E2=80=9Cclick=E2=
+=80=9D applications. I
+am going to assume that we are in an empty directory and the continue from
+there. To start, we will have a simple hello.py file with the following
+content:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"k">def</span> <span class=3D"nf">cli</span><spa=
+n class=3D"p">():</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"Hello World"</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>Now we will need a setup.py file. This will help us to use the python mo=
+dule we
+are writing as a command line tool. It is also the recommended way to write
+command line tools in python, then directly using shebang based scripts.</p=
+>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">from</span> <span class=3D"nn">setuptools</=
+span> <span class=3D"kn">import</span> <span class=3D"n">setup</span>
+
+<span class=3D"n">setup</span><span class=3D"p">(</span>
+    <span class=3D"n">name</span><span class=3D"o">=3D</span><span class=3D=
+"s2">"myhello"</span><span class=3D"p">,</span>
+    <span class=3D"n">version</span><span class=3D"o">=3D</span><span class=
+=3D"s1">'0.1'</span><span class=3D"p">,</span>
+    <span class=3D"n">py_modules</span><span class=3D"o">=3D</span><span cl=
+ass=3D"p">[</span><span class=3D"s1">'hello'</span><span class=3D"p">],</sp=
+an>
+    <span class=3D"n">install_requires</span><span class=3D"o">=3D</span><s=
+pan class=3D"p">[</span>
+        <span class=3D"s1">'Click'</span><span class=3D"p">,</span>
+    <span class=3D"p">],</span>
+    <span class=3D"n">entry_points</span><span class=3D"o">=3D</span><span =
+class=3D"s1">'''</span>
+<span class=3D"s1">        [console_scripts]</span>
+<span class=3D"s1">        myhello=3Dhello:cli</span>
+<span class=3D"s1">    '''</span><span class=3D"p">,</span>
+<span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>You can see that we mentioned the starting point of our tool in the
+entry_points, <em>hello:cli</em> points to the right function to start with=
+. We can
+then install this on the virtualenv locally. I will also create the virtual=
+env
+below so that becomes easier others. To learn more, read this
+<a class=3D"reference external" href=3D"http://click.pocoo.org/5/setuptools=
+/#setuptools-integration">chapter</a> later.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ python3 -m venv env
+$ source env/bin/activate
+$ python3 -m pip install --editable .
+Obtaining file:///home/kdas/code/practice/yoclick
+Collecting Click (from myhello=3D=3D0.1)
+Using cached click-6.7-py2.py3-none-any.whl
+Installing collected packages: Click, myhello
+Running setup.py develop for myhello
+Successfully installed Click-6.7 myhello
+
+$ myhello
+Hello World
+</pre></div>
+</div>
+<p>Now to convert the same script into a click based tool, we will make the
+following modifications:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>():</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"s2">"Hello World"</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>Now when we execute the command again, we see nothing changed visually, =
+but it
+magically has a <em>=E2=80=93help</em> command line argument (which is opti=
+onal).</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ myhello
+Hello World
+$ myhello --help
+Usage: myhello [OPTIONS]
+
+Options:
+--help  Show this message and exit.
+</pre></div>
+</div>
+</div>
+<div class=3D"section" id=3D"using-echo-for-printing-text">
+<h2 class=3D"highlighted">Using echo for printing text<a class=3D"headerlin=
+k" href=3D"https://pymbook.readthedocs.io/en/latest/click.html#using-echo-f=
+or-printing-text" title=3D"Permalink to this headline">=C2=B6</a></h2>
+<p>The click module suggests using <em>echo</em> function to print, rather =
+than the
+standard print function. So, we will make the required change in our code.<=
+/p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>():</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello World"</s=
+pan><span class=3D"p">)</span>
+</pre></div>
+</div>
+</div>
+<div class=3D"section" id=3D"boolean-flags">
+<h2>Boolean flags<a class=3D"headerlink" href=3D"https://pymbook.readthedoc=
+s.io/en/latest/click.html#boolean-flags" title=3D"Permalink to this headlin=
+e">=C2=B6</a></h2>
+<p>In a command line tool, we sometimes want to have a boolean option. If t=
+he
+option is provided then do something, if not provided, then do something el=
+se.
+In our example, we will call the flag as <em>=E2=80=93verbose</em>, it is p=
+rovided, then we
+will print some extra text.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--verbose'</spa=
+n><span class=3D"p">,</span> <span class=3D"n">is_flag</span><span class=3D=
+"o">=3D</span><span class=3D"kc">True</span><span class=3D"p">,</span> <spa=
+n class=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s2">"Wi=
+ll print verbose messages."</span><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>(</span><span class=3D"n">verbose</span><span class=3D"p">):</span>
+    <span class=3D"k">if</span> <span class=3D"n">verbose</span><span class=
+=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s2">"We are in t=
+he verbose mode."</span><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello World"</s=
+pan><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>We added another decorator to the cli function. In <em>click.option()</e=
+m> decorator,
+first we passed the flag using <em>=E2=80=93verbose</em>, then marked this =
+option as a
+boolean flag, and then finally added the help text.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ myhello --help
+Usage: myhello [OPTIONS]
+
+Options:
+--verbose  Will print verbose messages.
+--help     Show this message and exit.
+$ myhello --verbose
+We are in the verbose mode.
+Hello World
+</pre></div>
+</div>
+<p>By default, any boolean flag is treated as false.</p>
+</div>
+<div class=3D"section" id=3D"standard-options-in-the-command-line">
+<h2>Standard options in the command line<a class=3D"headerlink" href=3D"htt=
+ps://pymbook.readthedocs.io/en/latest/click.html#standard-options-in-the-co=
+mmand-line" title=3D"Permalink to this headline">=C2=B6</a></h2>
+<p>We can now add more options to our tool. For example, we will have a <em=
+>=E2=80=93name</em>
+option which will take a string as input.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--verbose'</spa=
+n><span class=3D"p">,</span> <span class=3D"n">is_flag</span><span class=3D=
+"o">=3D</span><span class=3D"kc">True</span><span class=3D"p">,</span> <spa=
+n class=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s2">"Wi=
+ll print verbose messages."</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--name'</span><=
+span class=3D"p">,</span> <span class=3D"n">default</span><span class=3D"o"=
+>=3D</span><span class=3D"s1">''</span><span class=3D"p">,</span> <span cla=
+ss=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s1">'Who are=
+ you?'</span><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>(</span><span class=3D"n">verbose</span><span class=3D"p">,</span><span cl=
+ass=3D"n">name</span><span class=3D"p">):</span>
+    <span class=3D"k">if</span> <span class=3D"n">verbose</span><span class=
+=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s2">"We are in t=
+he verbose mode."</span><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello World"</s=
+pan><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s1">'Bye </span><spa=
+n class=3D"si">{0}</span><span class=3D"s1">'</span><span class=3D"o">.</sp=
+an><span class=3D"n">format</span><span class=3D"p">(</span><span class=3D"=
+n">name</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ myhello --help
+Usage: myhello [OPTIONS]
+
+Options:
+--verbose    Will print verbose messages.
+--name TEXT  Who are you?
+--help       Show this message and exit.
+$ myhello
+Hello World
+Bye
+$ myhello --name kushal
+Hello World
+Bye kushal
+</pre></div>
+</div>
+</div>
+<div class=3D"section" id=3D"same-option-multiple-times">
+<h2>Same option multiple times<a class=3D"headerlink" href=3D"https://pymbo=
+ok.readthedocs.io/en/latest/click.html#same-option-multiple-times" title=3D=
+"Permalink to this headline">=C2=B6</a></h2>
+<p>We may want to take the same option multiple times. Click has a very sim=
+ple way to do so.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--verbose'</spa=
+n><span class=3D"p">,</span> <span class=3D"n">is_flag</span><span class=3D=
+"o">=3D</span><span class=3D"kc">True</span><span class=3D"p">,</span> <spa=
+n class=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s2">"Wi=
+ll print verbose messages."</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--name'</span><=
+span class=3D"p">,</span> <span class=3D"s1">'-n'</span><span class=3D"p">,=
+</span> <span class=3D"n">multiple</span><span class=3D"o">=3D</span><span =
+class=3D"kc">True</span><span class=3D"p">,</span> <span class=3D"n">defaul=
+t</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span class=
+=3D"p">,</span> <span class=3D"n">help</span><span class=3D"o">=3D</span><s=
+pan class=3D"s1">'Who are you?'</span><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>(</span><span class=3D"n">verbose</span><span class=3D"p">,</span><span cl=
+ass=3D"n">name</span><span class=3D"p">):</span>
+    <span class=3D"k">if</span> <span class=3D"n">verbose</span><span class=
+=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s2">"We are in t=
+he verbose mode."</span><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello World"</s=
+pan><span class=3D"p">)</span>
+    <span class=3D"k">for</span> <span class=3D"n">n</span> <span class=3D"=
+ow">in</span> <span class=3D"n">name</span><span class=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s1">'Bye </span>=
+<span class=3D"si">{0}</span><span class=3D"s1">'</span><span class=3D"o">.=
+</span><span class=3D"n">format</span><span class=3D"p">(</span><span class=
+=3D"n">n</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<p>In the above example, you can see that we specified the <em>=E2=80=93nam=
+e</em> as a multiple
+options. It also means the name parameter in the <em>cli</em> function is n=
+ow a tuple.</p>
+</div>
+<div class=3D"section" id=3D"help-text-for-the-script">
+<h2>Help text for the script<a class=3D"headerlink" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#help-text-for-the-script" title=3D"Per=
+malink to this headline">=C2=B6</a></h2>
+<p>We can add help text for the script using python docstrings. For example=
+:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--verbose'</spa=
+n><span class=3D"p">,</span> <span class=3D"n">is_flag</span><span class=3D=
+"o">=3D</span><span class=3D"kc">True</span><span class=3D"p">,</span> <spa=
+n class=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s2">"Wi=
+ll print verbose messages."</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--name'</span><=
+span class=3D"p">,</span> <span class=3D"s1">'-n'</span><span class=3D"p">,=
+</span> <span class=3D"n">multiple</span><span class=3D"o">=3D</span><span =
+class=3D"kc">True</span><span class=3D"p">,</span> <span class=3D"n">defaul=
+t</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span class=
+=3D"p">,</span> <span class=3D"n">help</span><span class=3D"o">=3D</span><s=
+pan class=3D"s1">'Who are you?'</span><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>(</span><span class=3D"n">verbose</span><span class=3D"p">,</span><span cl=
+ass=3D"n">name</span><span class=3D"p">):</span>
+    <span class=3D"sd">"""This is an example script to learn Click."""</spa=
+n>
+    <span class=3D"k">if</span> <span class=3D"n">verbose</span><span class=
+=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s2">"We are in t=
+he verbose mode."</span><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello World"</s=
+pan><span class=3D"p">)</span>
+    <span class=3D"k">for</span> <span class=3D"n">n</span> <span class=3D"=
+ow">in</span> <span class=3D"n">name</span><span class=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s1">'Bye </span>=
+<span class=3D"si">{0}</span><span class=3D"s1">'</span><span class=3D"o">.=
+</span><span class=3D"n">format</span><span class=3D"p">(</span><span class=
+=3D"n">n</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ myhello --help
+Usage: myhello [OPTIONS]
+
+This is an example script to learn Click.
+
+Options:
+--verbose        Will print verbose messages.
+-n, --name TEXT  Who are you?
+--help           Show this message and exit.
+</pre></div>
+</div>
+</div>
+<div class=3D"section" id=3D"super-fast-way-to-accept-password-with-confirm=
+ation">
+<h2>Super fast way to accept password with confirmation<a class=3D"headerli=
+nk" href=3D"https://pymbook.readthedocs.io/en/latest/click.html#super-fast-=
+way-to-accept-password-with-confirmation" title=3D"Permalink to this headli=
+ne">=C2=B6</a></h2>
+<p>Click provides a <em>password_option()</em> decorator, which can be used=
+ to accept a
+password over hidden prompt and second confirmation prompt. By the way, I a=
+m printing
+the password here as an example, never print the password to stdout in any
+tool.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--verbose'</spa=
+n><span class=3D"p">,</span> <span class=3D"n">is_flag</span><span class=3D=
+"o">=3D</span><span class=3D"kc">True</span><span class=3D"p">,</span> <spa=
+n class=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s2">"Wi=
+ll print verbose messages."</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--name'</span><=
+span class=3D"p">,</span> <span class=3D"s1">'-n'</span><span class=3D"p">,=
+</span> <span class=3D"n">multiple</span><span class=3D"o">=3D</span><span =
+class=3D"kc">True</span><span class=3D"p">,</span> <span class=3D"n">defaul=
+t</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span class=
+=3D"p">,</span> <span class=3D"n">help</span><span class=3D"o">=3D</span><s=
+pan class=3D"s1">'Who are you?'</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>password_option</span><span class=3D"p">()</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>(</span><span class=3D"n">verbose</span><span class=3D"p">,</span><span cl=
+ass=3D"n">name</span><span class=3D"p">,</span> <span class=3D"n">password<=
+/span><span class=3D"p">):</span>
+    <span class=3D"sd">"""This is an example script to learn Click."""</spa=
+n>
+    <span class=3D"k">if</span> <span class=3D"n">verbose</span><span class=
+=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s2">"We are in t=
+he verbose mode."</span><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello World"</s=
+pan><span class=3D"p">)</span>
+    <span class=3D"k">for</span> <span class=3D"n">n</span> <span class=3D"=
+ow">in</span> <span class=3D"n">name</span><span class=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s1">'Bye </span>=
+<span class=3D"si">{0}</span><span class=3D"s1">'</span><span class=3D"o">.=
+</span><span class=3D"n">format</span><span class=3D"p">(</span><span class=
+=3D"n">n</span><span class=3D"p">))</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s1">'We received </s=
+pan><span class=3D"si">{0}</span><span class=3D"s1"> as password.'</span><s=
+pan class=3D"o">.</span><span class=3D"n">format</span><span class=3D"p">(<=
+/span><span class=3D"n">password</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<p>The output looks like below:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ myhello --help
+Usage: myhello [OPTIONS]
+
+This is an example script to learn Click.
+
+Options:
+--verbose        Will print verbose messages.
+-n, --name TEXT  Who are you?
+--password TEXT
+--help           Show this message and exit.
+$ myhello
+Password:
+Repeat for confirmation:
+Hello World
+We received hello as password.
+</pre></div>
+</div>
+<p>To learn the full usage of password prompts, read <a class=3D"reference =
+external" href=3D"http://click.pocoo.org/5/options/#password-prompts">this =
+section</a>.</p>
+</div>
+<div class=3D"section" id=3D"must-have-arguments">
+<h2>Must have arguments<a class=3D"headerlink" href=3D"https://pymbook.read=
+thedocs.io/en/latest/click.html#must-have-arguments" title=3D"Permalink to =
+this headline">=C2=B6</a></h2>
+<p>You can also add arguments to your tool. These are must haves, and if no
+default value is provided, they are assumed to be strings. In the below
+example, the script is expecting a county name to be specified.</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"kn">import</span> <span class=3D"nn">click</spa=
+n>
+
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>command</span><span class=3D"p">()</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--verbose'</spa=
+n><span class=3D"p">,</span> <span class=3D"n">is_flag</span><span class=3D=
+"o">=3D</span><span class=3D"kc">True</span><span class=3D"p">,</span> <spa=
+n class=3D"n">help</span><span class=3D"o">=3D</span><span class=3D"s2">"Wi=
+ll print verbose messages."</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>option</span><span class=3D"p">(</span><span class=3D"s1">'--name'</span><=
+span class=3D"p">,</span> <span class=3D"s1">'-n'</span><span class=3D"p">,=
+</span> <span class=3D"n">multiple</span><span class=3D"o">=3D</span><span =
+class=3D"kc">True</span><span class=3D"p">,</span> <span class=3D"n">defaul=
+t</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span class=
+=3D"p">,</span> <span class=3D"n">help</span><span class=3D"o">=3D</span><s=
+pan class=3D"s1">'Who are you?'</span><span class=3D"p">)</span>
+<span class=3D"nd">@click</span><span class=3D"o">.</span><span class=3D"n"=
+>argument</span><span class=3D"p">(</span><span class=3D"s1">'country'</spa=
+n><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">cli</span><span class=3D"p"=
+>(</span><span class=3D"n">verbose</span><span class=3D"p">,</span><span cl=
+ass=3D"n">name</span><span class=3D"p">,</span> <span class=3D"n">country</=
+span><span class=3D"p">):</span>
+    <span class=3D"sd">"""This is an example script to learn Click."""</spa=
+n>
+    <span class=3D"k">if</span> <span class=3D"n">verbose</span><span class=
+=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s2">"We are in t=
+he verbose mode."</span><span class=3D"p">)</span>
+    <span class=3D"n">click</span><span class=3D"o">.</span><span class=3D"=
+n">echo</span><span class=3D"p">(</span><span class=3D"s2">"Hello </span><s=
+pan class=3D"si">{0}</span><span class=3D"s2">"</span><span class=3D"o">.</=
+span><span class=3D"n">format</span><span class=3D"p">(</span><span class=
+=3D"n">country</span><span class=3D"p">))</span>
+    <span class=3D"k">for</span> <span class=3D"n">n</span> <span class=3D"=
+ow">in</span> <span class=3D"n">name</span><span class=3D"p">:</span>
+        <span class=3D"n">click</span><span class=3D"o">.</span><span class=
+=3D"n">echo</span><span class=3D"p">(</span><span class=3D"s1">'Bye </span>=
+<span class=3D"si">{0}</span><span class=3D"s1">'</span><span class=3D"o">.=
+</span><span class=3D"n">format</span><span class=3D"p">(</span><span class=
+=3D"n">n</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<p>The output looks like:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>$ myhello
+Usage: myhello [OPTIONS] COUNTRY
+
+Error: Missing argument "country".
+$ myhello India
+Hello India
+</pre></div>
+</div>
+<p>Click has many other useful features, like <em>yes parameter</em>, <em>f=
+ile path input</em>.
+I am not going to write about all of those here, but you can always read it=
+ from the
+<a class=3D"reference external" href=3D"http://click.pocoo.org/">upstream d=
+ocumentation</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class=3D"sphinxsidebar" role=3D"navigation" aria-label=3D"main n=
+avigation" style=3D"">
+        <div class=3D"sphinxsidebarwrapper"><p class=3D"logo">
+  <a href=3D"https://pymbook.readthedocs.io/en/latest/index.html">
+    <img class=3D"logo" src=3D"https://pymbook.readthedocs.io/en/latest/_st=
+atic/pym.png" alt=3D"Logo">
+  </a>
+</p>
+<p>
+<iframe src=3D"cid:frame-5113A9D3982744100B9AF1120112DADD@mhtml.blink" allo=
+wtransparency=3D"true" frameborder=3D"0" scrolling=3D"0" width=3D"200px" he=
+ight=3D"35px"></iframe>
+</p>
+
+<p>
+  pym is a book to learn Python.
+  It targets people who are completely
+  new to the language.
+</p>
+<div class=3D"sphinx-toc sphinxlocaltoc">
+    <h3><a href=3D"https://pymbook.readthedocs.io/en/latest/index.html">Pag=
+e contents</a></h3>
+    <ul>
+<li class=3D"local active focus"><a class=3D"reference internal" href=3D"ht=
+tps://pymbook.readthedocs.io/en/latest/click.html#">Building command line a=
+pplications with Click</a><ul>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#installation-and-development-tips">Ins=
+tallation, and development tips</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#using-echo-for-printing-text">Using ec=
+ho for printing text</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#boolean-flags">Boolean flags</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#standard-options-in-the-command-line">=
+Standard options in the command line</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#same-option-multiple-times">Same optio=
+n multiple times</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#help-text-for-the-script">Help text fo=
+r the script</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#super-fast-way-to-accept-password-with=
+-confirmation">Super fast way to accept password with confirmation</a></li>
+<li class=3D"local"><a class=3D"reference internal" href=3D"https://pymbook=
+.readthedocs.io/en/latest/click.html#must-have-arguments">Must have argumen=
+ts</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class=3D"sphinxprev">
+    <h4>Previous page</h4>
+    <p class=3D"topless"><a href=3D"https://pymbook.readthedocs.io/en/lates=
+t/projectstructure.html" title=3D"Previous page">=E2=86=90 A project struct=
+ure</a></p>
+  </div>
+  <div class=3D"sphinxnext">
+    <h4>Next page</h4>
+    <p class=3D"topless"><a href=3D"https://pymbook.readthedocs.io/en/lates=
+t/pypercard.html" title=3D"Next page">=E2=86=92 Simple GUI application deve=
+lopment using PyperCard</a></p>
+  </div>
+  <div role=3D"note" aria-label=3D"source link">
+    <h3>This Page</h3>
+    <ul class=3D"this-page-menu">
+      <li><a href=3D"https://pymbook.readthedocs.io/en/latest/_sources/clic=
+k.rst.txt" rel=3D"nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id=3D"searchbox" style=3D"" role=3D"search">
+  <h3>Quick search</h3>
+    <div class=3D"searchformwrapper">
+    <form class=3D"search" action=3D"https://pymbook.readthedocs.io/en/late=
+st/search.html" method=3D"get">
+      <input type=3D"text" name=3D"q">
+      <input type=3D"submit" value=3D"Go">
+     =20
+     =20
+    </form>
+    </div>
+</div>
+
+        </div>
+      </div>
+   =20
+   =20
+        <div class=3D"sidebar-toggle-group" style=3D"">
+           =20
+            <button class=3D"sidebar-toggle" id=3D"sidebar-hide" title=3D"H=
+ide the sidebar menu">
+                 =C2=AB
+                <span class=3D"show-for-small">hide menu</span>
+               =20
+            </button>
+            <button class=3D"sidebar-toggle" id=3D"sidebar-show" title=3D"S=
+how the sidebar menu" style=3D"display: none;">
+               =20
+                <span class=3D"show-for-small">menu</span>
+                <span class=3D"hide-for-small">sidebar</span>
+                 =C2=BB
+            </button>
+        </div>
+   =20
+      <div class=3D"clearer"></div>
+    </div>
+    <div class=3D"relbar-bottom">
+       =20
+    <div class=3D"related" role=3D"navigation" aria-label=3D"related naviga=
+tion">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/genindex.html=
+" title=3D"General Index">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/pypercard.htm=
+l" title=3D"Simple GUI application development using PyperCard">next</a> &n=
+bsp; &nbsp;</li>
+        <li class=3D"right">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/projectstruct=
+ure.html" title=3D"A project structure">previous</a> &nbsp; &nbsp;</li>
+    <li><a href=3D"https://pymbook.readthedocs.io/en/latest/index.html">Pyt=
+hon for you and me 0.5.beta1 documentation</a> =C2=BB</li>
+=20
+      </ul>
+    </div>
+    </div>
+
+    <div class=3D"footer" role=3D"contentinfo">
+        =C2=A9 Copyright 2008-2022, Kushal Das.
+      Created using <a href=3D"http://sphinx-doc.org/">Sphinx</a> 1.8.6.
+    </div>
+    <!-- cloud_sptheme 1.4 -->
+ =20
+<div class=3D"hide-for-small"></div><!-- Inserted RTD Footer -->
+
+<div class=3D"injected">
+
+ =20
+  <div class=3D"rst-versions rst-badge" data-toggle=3D"rst-versions">
+    <span class=3D"rst-current-version" data-toggle=3D"rst-current-version"=
+>
+      <span class=3D"fa fa-book">&nbsp;</span>
+      v: latest
+      <span class=3D"fa fa-caret-down"></span>
+    </span>
+    <div class=3D"rst-other-versions">
+     =20
+
+     =20
+     =20
+     =20
+      <dl>
+        <dt>Versions</dt>
+       =20
+        <dd class=3D"rtd-current-item">
+          <a href=3D"https://pymbook.readthedocs.io/en/latest/click.html">l=
+atest</a>
+        </dd>
+       =20
+        <dd>
+          <a href=3D"https://pymbook.readthedocs.io/en/stable/click.html">s=
+table</a>
+        </dd>
+       =20
+        <dd>
+          <a href=3D"https://pymbook.readthedocs.io/en/py3/click.html">py3<=
+/a>
+        </dd>
+       =20
+        <dd>
+          <a href=3D"https://pymbook.readthedocs.io/en/py2/click.html">py2<=
+/a>
+        </dd>
+       =20
+      </dl>
+     =20
+     =20
+
+     =20
+     =20
+      <dl>
+        <dt>Downloads</dt>
+       =20
+        <dd><a href=3D"https://pymbook.readthedocs.io/_/downloads/en/latest=
+/pdf/">PDF</a></dd>
+       =20
+        <dd><a href=3D"https://pymbook.readthedocs.io/_/downloads/en/latest=
+/htmlzip/">HTML</a></dd>
+       =20
+        <dd><a href=3D"https://pymbook.readthedocs.io/_/downloads/en/latest=
+/epub/">Epub</a></dd>
+       =20
+      </dl>
+     =20
+     =20
+
+     =20
+      <dl>
+       =20
+        <!-- These are kept as relative links for internal installs that ar=
+e http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href=3D"https://readthedocs.org/projects/pymbook/">Project Hom=
+e</a>
+        </dd>
+        <dd>
+          <a href=3D"https://readthedocs.org/projects/pymbook/builds/">Buil=
+ds</a>
+        </dd>
+        <dd>
+          <a href=3D"https://readthedocs.org/projects/pymbook/downloads/">D=
+ownloads</a>
+        </dd>
+      </dl>
+     =20
+
+     =20
+
+     =20
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href=3D"https://github.com/kushaldas/pym/blob/main/docs/click.=
+rst">View</a>
+        </dd>
+       =20
+      </dl>
+     =20
+     =20
+
+     =20
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style=3D"padding: 6px;">
+           =20
+            <form id=3D"flyout-search-form" class=3D"wy-form" target=3D"_bl=
+ank" action=3D"https://readthedocs.org/projects/pymbook/search/" method=3D"=
+get">
+              <input type=3D"text" name=3D"q" aria-label=3D"Search docs" pl=
+aceholder=3D"Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+     =20
+
+      <hr>
+
+     =20
+        <small>
+          <span>Hosted by <a href=3D"https://readthedocs.org/">Read the Doc=
+s</a></span>
+          <span> =C2=B7 </span>
+          <a href=3D"https://docs.readthedocs.io/page/privacy-policy.html">=
+Privacy Policy</a>
+        </small>
+     =20
+
+     =20
+    </div>
+  </div>
+ =20
+
+</div>
+</body></html>
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pymbook.readthedocs.io/en/latest/_static/cloud.css
+
+@charset "utf-8";
+
+@import url("basic.css");
+
+* { box-sizing: border-box; }
+
+body { padding: 0px; color: rgb(0, 0, 0); font-family: "Open Sans", sans-se=
+rif; font-size: 100%; line-height: 1.5em; margin: 1em 1em 0px; background: =
+fixed rgb(26, 65, 98); }
+
+div.related { margin: 0px auto; max-width: 11.5in; background: rgb(86, 130,=
+ 173); line-height: 1.5em; padding: 0.75em 0px; color: rgb(255, 255, 255); =
+text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px; }
+
+div.relbar-top div.related { border-radius: 0.7em 0.7em 0px 0px; }
+
+div.relbar-bottom div.related { border-radius: 0px 0px 0.7em 0.7em; }
+
+div.related a { display: inline-block; padding: 0.3em 0.6em; border-radius:=
+ 0.8em; font-weight: bold; color: rgb(255, 255, 255); border: 1px solid tra=
+nsparent; }
+
+div.related li.right a { background: rgba(0, 0, 0, 0.1); font-weight: norma=
+l; }
+
+div.related a:hover, div.related li.right a:hover { background: rgb(255, 24=
+9, 228); color: rgb(211, 145, 16); border-color: rgb(248, 209, 134); text-d=
+ecoration: none; text-shadow: none; box-shadow: rgba(0, 0, 0, 0.5) 1px 1px =
+2px -1px; }
+
+div.document { position: relative; margin: 0px auto; max-width: 11.5in; bac=
+kground: rgb(242, 242, 242); }
+
+div.documentwrapper { float: left; width: 100%; }
+
+div.bodywrapper { margin: 0px 0px 0px 3in; }
+
+div.document.sidebar-hidden div.bodywrapper { margin-left: 0px; }
+
+div.body { min-height: 6in; background-color: rgb(255, 255, 255); border-le=
+ft: 1px solid rgba(0, 0, 0, 0.05); box-shadow: rgba(0, 0, 0, 0.05) -1px 0px=
+ 2px; line-height: 1.5em; color: rgb(0, 0, 0); padding: 30px 20px; min-widt=
+h: 0px; max-width: none; }
+
+div.sphinxsidebar { margin-top: 0px; width: 3in; font-size: 90%; line-heigh=
+t: 1.25em; }
+
+div.document.sidebar-hidden div.sphinxsidebar { display: none; }
+
+div.sphinxsidebarwrapper { padding: 1em 0px 0px 10px; }
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 { padding: 0px; margin: 24px 16p=
+x 0px 0px; font-family: "Noticia Text", serif; font-weight: normal; color: =
+rgb(119, 119, 119); }
+
+div.sphinxsidebar h3 { font-size: 1.4em; }
+
+div.sphinxsidebar h4 { font-size: 1.3em; }
+
+div.sphinxsidebar h3 a, div.sphinxsidebar h4 a { color: rgb(119, 119, 119);=
+ }
+
+div.sphinxsidebar p { color: rgb(119, 119, 119); }
+
+div.sphinxsidebar p.topless { margin: 5px 10px 10px; }
+
+div.sphinxsidebar ul { margin: 10px 0px 10px 10px; padding: 0px; color: rgb=
+(119, 119, 119); }
+
+div.sphinxsidebar a { color: rgb(0, 52, 105); border-style: solid; border-c=
+olor: transparent; border-image: initial; border-width: 1px 0px; }
+
+div.sphinxsidebar a:hover { color: rgb(211, 145, 16); background: rgb(255, =
+249, 228); border-color: rgb(248, 209, 134); text-decoration: none; }
+
+div.sphinxsidebar ul li a { overflow: hidden; white-space: nowrap; }
+
+div.sphinxsidebar ul li a:hover { display: inline-table; min-width: calc(10=
+0% - 5px); }
+
+div.sphinxsidebar a:active { color: rgb(119, 119, 119); }
+
+div.sphinxsidebar p.logo { margin: 1em 0px 0px -10px; text-align: center; m=
+ax-width: 100%; }
+
+div.sphinxsidebar p.logo a { display: inline-block; border-radius: 3px; }
+
+div.sphinxsidebarwrapper > h3:first-child, div.sphinxsidebarwrapper > h4:fi=
+rst-child, div.sphinxsidebarwrapper > div:first-child > h3:first-child, div=
+.sphinxsidebarwrapper > div:first-child > h4:first-child { margin-top: 0.2e=
+m; }
+
+div.sphinxsidebar ul, div.sphinxsidebar ul ul, div.sphinxprev p.topless, di=
+v.sphinxnext p.topless { list-style: none; margin-left: 0px; }
+
+div.sphinxsidebar ul ul { margin-left: 1.5em; }
+
+div.sphinxsidebar ul a, div.sphinxprev a, div.sphinxnext a { position: rela=
+tive; display: block; padding: 1px 4px 3px 5px; margin: 0px 5px 0px 0px; bo=
+rder: 1px solid transparent; border-radius: 3px; }
+
+div.sphinxsidebar ul a:hover, div.sphinxprev a:hover, div.sphinxnext a:hove=
+r { background: rgb(255, 249, 228); border-color: rgb(248, 209, 134); color=
+: rgb(211, 145, 16); text-decoration: none; }
+
+div.sphinx-toc ul a:not([href^=3D"#"]):hover { position: relative; overflow=
+: visible; }
+
+div.sphinx-toc ul a:not([href^=3D"#"]):hover::before { content: "=E2=87=92"=
+; position: absolute; right: 100%; font-size: 1.5em; margin-right: 4px; opa=
+city: 0.7; }
+
+div.sphinxglobaltoc ul a[href=3D"#"] { font-style: italic; }
+
+div.sphinxglobaltoc ul a:not([href*=3D"#"]) { font-size: 0.95em; font-style=
+: italic; }
+
+div.sphinx-toc li { position: relative; }
+
+div.sphinx-toc li::before { position: absolute; left: -0.8em; color: rgb(21=
+1, 145, 16); }
+
+div.sphinx-toc li.current.active:not(.focus)::before { content: "=E2=96=BC"=
+; top: 0.1em; opacity: 0.5; }
+
+div.sphinx-toc li.focus.local::before { content: "=E2=96=B6"; opacity: 0.7;=
+ }
+
+div.sphinx-toc > ul:not(:hover) li.focus.child::before { content: "=E2=87=
+=92"; opacity: 0.5; font-size: 1.5em; margin-left: -4px; }
+
+div.sphinx-toc li.focus.local > a:not(:hover) { color: rgb(211, 145, 16); }
+
+div.sphinx-toc li.toc-toggle > a::after { content: "[=E2=80=93]"; padding-l=
+eft: 0.25em; opacity: 0.5; }
+
+div.sphinx-toc li.toc-toggle.closed > a::after { content: "[+]"; }
+
+div#searchbox { margin-right: 10px; }
+
+div#searchbox form > div { display: inline-block; margin-right: -0.4em; }
+
+div.sphinxsidebar input, h1#search-documentation ~ form input { border: 1px=
+ solid rgba(0, 0, 0, 0.15); font-family: sans-serif; font-size: 1em; }
+
+div#searchbox input[type=3D"submit"], h1#search-documentation ~ form > inpu=
+t[type=3D"submit"] { background: rgb(242, 242, 242); border-radius: 0px 5px=
+ 5px 0px; }
+
+div#searchbox input[type=3D"submit"]:hover, h1#search-documentation ~ form =
+input[type=3D"submit"]:hover, button.sidebar-toggle#sidebar-hide:hover, but=
+ton.sidebar-toggle#sidebar-show:hover, .highlight .copybutton:hover { backg=
+round: rgb(255, 249, 228); color: rgb(211, 145, 16); border-color: rgb(248,=
+ 209, 134); }
+
+h1#search-documentation ~ form input[type=3D"text"]:focus, div.sphinxsideba=
+r input[type=3D"text"]:focus { border-color: rgb(248, 209, 134); }
+
+.highlight .copybutton:hover:not(:active), div.sphinxsidebar button:hover:n=
+ot(:active), div.sphinxsidebar input[type=3D"submit"]:hover:not(:active), h=
+1#search-documentation ~ form input[type=3D"submit"]:hover, button.sidebar-=
+toggle:hover:not(:active) { box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 2px -1px=
+; }
+
+div.sphinxsidebar .searchtip { color: rgb(153, 153, 153); }
+
+#searchbox .highlight-link a[href$=3D"hideSearchWords()"] { display: block;=
+ padding: 0px 1em; font-size: 80%; text-align: right; }
+
+#searchbox .highlight-link a[href$=3D"hideSearchWords()"]::before { content=
+: "=C3=97"; font-weight: bold; padding-right: 0.25em; }
+
+.sidebar-toggle-group { position: absolute; width: 3in; top: 0px; left: 0px=
+; z-index: 1; }
+
+.sidebar-toggle-group.no-js { display: none; }
+
+div.document.sidebar-hidden .sidebar-toggle-group { width: auto; }
+
+div.document.document-hidden .sidebar-toggle-group { width: 100%; }
+
+button.sidebar-toggle { margin: 0px; padding: 6px 12px; color: rgb(119, 119=
+, 119); font-size: 1em; white-space: nowrap; }
+
+button#sidebar-hide { position: absolute; top: 0px; right: -1px; background=
+: transparent; border-width: 0px 1px 1px; border-style: solid; border-color=
+: rgba(0, 0, 0, 0.05); border-image: initial; border-bottom-left-radius: 0.=
+7em; }
+
+button#sidebar-show { position: absolute; top: 0px; left: 0px; background: =
+rgb(242, 242, 242); border-width: 0px 1px 1px; border-style: solid; border-=
+color: rgba(0, 0, 0, 0.15); border-image: initial; border-bottom-right-radi=
+us: 0.7em; }
+
+div.footer { color: rgb(176, 176, 176); width: 100%; padding: 9px 0px; text=
+-align: center; font-size: 75%; }
+
+div.footer button.link { margin: 0px -1px; padding: 0px; background: none; =
+border: none; font-size: inherit; font-family: inherit; }
+
+div.footer a, div.footer button.link { color: rgb(176, 176, 176); text-deco=
+ration: underline; }
+
+div.footer a:hover, div.footer button.link:hover { color: white; }
+
+div.footer + div.footer, div.footer + script + div.footer { margin-top: -12=
+px; }
+
+div.body h1, div.body h2, div.body p.rubric, div.body h3, div.body h4, div.=
+body h5, div.body h6 { font-family: "Noticia Text", serif; font-weight: nor=
+mal; color: rgb(51, 51, 51); clear: both; }
+
+div.body h1 { font-size: 2em; line-height: 1.5em; margin: 1.5em 0px; text-a=
+lign: center; }
+
+div.body > .section > h1 { margin: 0.563em 0px 1.5em; }
+
+div.body h1 + .subtitle { opacity: 0.54; font-style: italic; font-weight: b=
+old; margin-bottom: 2.25rem; margin-top: -2.25rem; text-align: center; }
+
+div.body h2, div.body p.rubric { font-size: 1.875em; line-height: 1.6em; ma=
+rgin: 0.8em 0px; }
+
+div.body h3 { font-size: 1.625em; line-height: 1.84615em; margin: 0.692em 0=
+px; }
+
+div.body h2, div.body p.rubric, .section.emphasize-children > .section > h3=
+, #table-of-contents > h1, h1#search-documentation { padding: 6px 10px; bac=
+kground-color: rgb(132, 166, 199); border-style: solid; border-color: rgba(=
+0, 0, 0, 0.125); border-image: initial; border-width: 0px 0px 0px 6px; colo=
+r: rgb(255, 255, 255); text-shadow: rgba(0, 0, 0, 0.125) 1px 1px; border-ra=
+dius: 5px; }
+
+div.body h2, div.body p.rubric, #table-of-contents > h1, h1#search-document=
+ation { margin: 0.8em 1px; }
+
+.section.emphasize-children > .section > h3 { margin: 0.923em 1px; }
+
+div.body p.rubric, .section.emphasize-children > .section > h3 { background=
+-color: rgb(146, 188, 222); }
+
+div.body h2:hover a.headerlink:not(:hover), .section.emphasize-children > .=
+section > h3:hover a.headerlink:not(:hover) { opacity: 0.4; }
+
+div.body h2.highlighted, .section.emphasize-children > .section > h3.highli=
+ghted { background-color: rgb(251, 229, 78); border-color: rgb(248, 209, 13=
+4); color: rgb(51, 51, 51); }
+
+div.body h4 { font-size: 1.25em; line-height: 1.2em; margin: 1.2em 0px; cle=
+ar: both; }
+
+div.body h5 { font-size: 1.1em; line-height: 1.36364em; margin: 1.364em 0px=
+; }
+
+div.body h6 { font-size: 1em; line-height: 1.5em; margin: 1.5em 0px; }
+
+#table-of-contents > h1, h1#search-documentation { margin-top: 0px; }
+
+.toctree-wrapper.highlight-pages:not(.hide-sections) li.page > a { font-wei=
+ght: bold; }
+
+.toctree-wrapper.space-pages li.page { margin-top: 1em; }
+
+.toctree-wrapper.hide-sections li:not(.page) { list-style: none; margin-lef=
+t: -2.5rem; }
+
+.toctree-wrapper.hide-sections li:not(.page) > a { display: none; }
+
+#hide-page-sections { float: right; opacity: 0.88; }
+
+a.headerlink { color: rgb(0, 52, 105); font-size: 0.8em; margin: 0px 0px 0p=
+x 1px; padding: 0px 5px 0px 4px; text-decoration: none; border-style: solid=
+; border-color: transparent; border-image: initial; border-width: 1px 0px; =
+border-radius: 0.35em; }
+
+div.body a.headerlink:hover { background-color: rgb(255, 249, 228); border-=
+color: rgb(248, 209, 134); color: rgb(211, 145, 16); text-decoration: none;=
+ }
+
+a.headerlink:hover:active { box-shadow: none; }
+
+.html-toggle-button { position: relative; cursor: pointer; }
+
+.html-toggle-button:hover::after, .section.emphasize-children > .section > =
+h3.html-toggle-button:hover::after { background: rgb(255, 249, 228); border=
+-color: rgb(248, 209, 134); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0=
+.5) 1px 1px 2px -1px; color: rgb(211, 145, 16); }
+
+.html-toggle-button::after { position: relative; top: -0.15em; margin: 0px;=
+ padding: 0.15em 0.3em; text-shadow: none; font-size: 65%; font-style: ital=
+ic; font-weight: bold; border: 1px solid transparent; }
+
+.html-toggle.collapsed > .html-toggle-button::after { content: "[+ show sec=
+tion]"; }
+
+.html-toggle.expanded > .html-toggle-button::after { content: "[- hide sect=
+ion]"; }
+
+.html-toggle-button:active::after, .section.emphasize-children > .section >=
+ h3.html-toggle-button:active::after { position: relative; top: calc(-0.15e=
+m + 1px); left: 1px; }
+
+.clear, .clear-both { clear: both; }
+
+.clear-left { clear: left; }
+
+.clear-right { clear: right; }
+
+.clear-none { clear: none; }
+
+div.body .clear-none > h3 { clear: none; }
+
+.hidden { display: none; }
+
+div.body p { text-align: justify; margin: 1.5em 0px; }
+
+div.body li, div.body dd { text-align: justify; }
+
+div.body hr { margin: 0px 10px; background: none; border-style: dashed; bor=
+der-color: rgba(0, 0, 0, 0.15); border-image: initial; border-width: 1px 0p=
+x 0px; }
+
+.strike { text-decoration: line-through; }
+
+a.footnote-reference { font-size: 70%; position: relative; top: -0.75em; }
+
+table.docutils.footnote { margin: 1em 0px 0px 1em; }
+
+dl { margin-bottom: 1.5em; }
+
+li > dl:only-child { margin-bottom: 0px; }
+
+dd { margin-right: 10px; }
+
+dd ol { margin-bottom: 10px; }
+
+dl.docutils > dt { font-size: 1.1em; margin-bottom: 0.5em; }
+
+dl.docutils > dd + dt { margin-top: 1.5em; }
+
+ul + ul, ul + div > ul:only-child, div.toctree-wrapper + ul { margin-top: -=
+1em; }
+
+dd ul { margin-bottom: 1.5em; }
+
+li > p ~ ul.simple { margin-bottom: 1.5em; }
+
+a { color: rgb(0, 52, 105); text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { color: rgb(211, 145, 16); background: rgb(255, 249, 228); text-de=
+coration: underline; }
+
+a:hover:active { left: 1px; top: 1px; }
+
+a.biglink { font-size: 130%; }
+
+a.external::before { content: "=E2=87=97"; padding-right: 0.1em; }
+
+a.external.issue::before { content: "=E2=87=97"; }
+
+a.external[href^=3D"mailto:"]::before { content: ""; }
+
+em.issue::before { content: "=E2=87=97"; padding-right: 0.1em; }
+
+dt:target, .footnote:target, .highlighted { padding: 4px; margin: -4px; bac=
+kground-color: rgb(251, 229, 78); border-radius: 10px; }
+
+table.fullwidth { width: 100%; }
+
+table.centered { margin-left: auto; margin-right: auto; }
+
+table.docutils.plain { border: none; }
+
+table.docutils.plain tr.row-odd > * { background: none; }
+
+table.docutils.html-plain-table tr.row-odd > * { background: none; }
+
+table.docutils.align-right { margin-left: auto; }
+
+table.docutils th { border: 0px solid transparent; padding: 0.4em; font-fam=
+ily: "Noticia Text", serif; background: rgba(0, 0, 0, 0.15); }
+
+table.docutils th.head:not(.stub) { border-bottom: 1px solid rgba(0, 0, 0, =
+0.15); }
+
+table.docutils th.stub + td { border-left: 1px solid rgba(0, 0, 0, 0.15); }
+
+table.docutils td { padding: 0.4em; border: 0px solid rgba(0, 0, 0, 0.15); =
+}
+
+table.docutils tr.row-odd td { background: rgba(0, 0, 0, 0.06); }
+
+h2 + table.docutils { margin-top: 1em; }
+
+table > caption { margin: 1em 0px 0.5em; font-style: italic; }
+
+table.docutils th + .single-left-divider, table.docutils th + .double-left-=
+divider { border-left-width: 0px; }
+
+table.field-list { margin: 1.5em 0px; }
+
+table.field-list th { background: none; padding: 0px 0.4em 0px 0px; }
+
+table.field-list td { padding: 0px 0px 1.5em; }
+
+table.field-list tr:last-child td { padding-bottom: 0px; }
+
+td.field-body > ul:first-child.simple > li { margin: 0px 0px 1.5em; }
+
+td.field-body > ul:first-child.simple > li:last-child { margin-bottom: 0px;=
+ }
+
+td.field-body > em, td.field-body > ul.first.simple > li > em { padding: 2p=
+x 4px; }
+
+td.field-body > p, td.field-body > ul > li > p { margin: 0px 0px 1.5em; }
+
+td.field-body > p:last-child, td.field-body > ul > li > .admonition { margi=
+n-bottom: 0px; }
+
+td.field-body > p:empty { display: none; }
+
+div.admonition, p.deprecated { background: url("icon-note.png") 0.6em 0.5em=
+ / auto 1.58em no-repeat rgb(231, 240, 254); font-size: 0.88em; line-height=
+: 1.70455em; margin: 0.705em 0px; padding: 0.5em 1em; border-style: solid; =
+border-color: rgba(0, 0, 0, 0.05); border-image: initial; border-width: 1px=
+ 0px; border-radius: 5px; }
+
+div.caution, div.important { background-color: rgb(255, 247, 224); backgrou=
+nd-image: url("icon-caution.png"); }
+
+div.warning { background-color: rgb(255, 228, 228); background-image: url("=
+icon-warning.png"); }
+
+div.danger, div.admonition.error { background-color: rgb(255, 228, 228); ba=
+ckground-image: url("icon-danger.png"); }
+
+div.seealso { background-color: rgb(255, 247, 224); background-image: url("=
+icon-seealso.png"); }
+
+div.admonition-todo { background-color: rgb(255, 247, 224); background-imag=
+e: url("icon-todo.png"); }
+
+p.deprecated { background-color: rgb(251, 236, 224); background-image: url(=
+"icon-deprecated.png"); }
+
+div.admonition p, div.admonition pre, div.admonition ul, div.admonition ol =
+{ line-height: 1.70455em; margin: 0em 0px; }
+
+h1 ~ div.admonition { margin-left: 1.5em; margin-right: 1.5em; }
+
+div.admonition.float-right, div.admonition.floater { float: right; max-widt=
+h: 40%; margin: 0px 0px 1.5em 1.5em; }
+
+.admonition.float-left { float: left; max-width: 50%; margin: 0px 1.5em 1.5=
+em 0px; }
+
+.admonition.float-center { clear: both; max-width: 65%; margin: 0px auto 1.=
+5em; }
+
+p.admonition-title:first-child { margin: -0.5em -1em 0.5em; padding: 0.5em =
+0.5em 0.5em 2.65em; background: rgba(0, 0, 0, 0.05); border-radius: 3px 3px=
+ 0px 0px; }
+
+p.admonition-title:first-child { margin-top: -0.5em !important; }
+
+div.admonition.inline-title p.admonition-title { display: inline; margin: 0=
+px; padding: 0px 0.25em 0px 1.5em; }
+
+div.admonition.inline-title p.admonition-title::after { content: ":"; }
+
+div.admonition.inline-title p.admonition-title + p { display: inline; }
+
+div.admonition.inline-title p.admonition-title + ul { margin-top: 0px; }
+
+div.admonition.inline-title p.admonition-title { background: none; }
+
+div.admonition.without-title p.admonition-title { display: none; }
+
+div.admonition.without-title { padding-left: 2.65em; }
+
+div#todos p.admonition-title { font-weight: normal; color: rgb(170, 170, 17=
+0); font-size: 70%; }
+
+div#todos div.admonition-todo + p { font-size: 70%; text-align: right; marg=
+in-top: -0.5em; margin-bottom: 1.5em; color: rgb(170, 170, 170); }
+
+div#todos div.admonition-todo + p a { font-size: 130%; }
+
+div.deprecated, div.versionchanged, div.versionadded { font-size: 0.88em; l=
+ine-height: 1.70455em; margin: 1.705em 0px; opacity: 0.6; }
+
+span.versionmodified { font-weight: bold; }
+
+div.highlight { background: none; margin: 1.5em 0px; }
+
+div.highlight pre, td.linenos pre { padding: 10px; font-family: "Roboto Mon=
+o", monospace; font-size: 85%; line-height: 1.5em; }
+
+div.highlight pre { background-color: rgb(238, 255, 204); border-color: rgb=
+(170, 204, 153); border-image: initial; border-width: 1px 0px; border-style=
+: solid dotted dotted solid; border-radius: 3px; color: rgb(17, 17, 17); }
+
+div[class|=3D"highlight"] + div[class|=3D"highlight"] { margin-top: -1.5em;=
+ }
+
+p + [class|=3D"highlight"] > table.highlighttable { margin-top: -1em; margi=
+n-bottom: -1em; }
+
+table.highlighttable { display: block; }
+
+table.highlighttable tbody { display: block; }
+
+table.highlighttable tr { display: flex; align-items: flex-start; justify-c=
+ontent: flex-start; }
+
+table.highlighttable td { display: block; padding: 0px; }
+
+table.highlighttable td.code { width: 100%; max-width: calc(100% - 1em); }
+
+table.highlighttable div.linenodiv { margin-top: 2.2em; }
+
+table.highlighttable div.linenodiv pre { background: none; border: 0px; mar=
+gin: 0px; padding: 0px 0.5em 0px 0px; }
+
+code { font-family: "Roboto Mono", monospace; font-size: 90%; }
+
+code.literal { background-color: rgba(0, 0, 0, 0.075); border: 1px solid rg=
+ba(0, 0, 0, 0.05); padding: 0px 4px; margin: 1px; border-radius: 4px; }
+
+p code.literal { white-space: nowrap; }
+
+code.samp.literal > em { font-family: "Roboto Mono", monospace; padding: 0p=
+x 1px; opacity: 0.6; }
+
+code.samp.literal > em::before { content: "{"; }
+
+code.samp.literal > em::after { content: "}"; }
+
+h1 code.literal { font-size: 80%; }
+
+h1 code.samp.literal > em { font-weight: normal; }
+
+div.sphinxsidebar code.literal, a.reference code.literal, div.related a cod=
+e.literal, code.literal.xref { background-color: transparent; border: none;=
+ padding: 0px; margin: 0px; }
+
+.viewcode-back { font-family: "Open Sans", sans-serif; }
+
+div.viewcode-block:target { background-color: rgb(244, 222, 191); border-to=
+p: 1px solid rgb(170, 204, 153); border-bottom: 1px solid rgb(170, 204, 153=
+); }
+
+.highlight .copybutton { position: absolute; right: 0px; top: 0px; margin: =
+0px; padding: 0px 6px; background: transparent; border: 1px solid transpare=
+nt; border-radius: 3px; font-size: 75%; color: rgb(119, 119, 119); white-sp=
+ace: nowrap; cursor: pointer; }
+
+.highlight .copybutton.active { text-decoration: line-through; opacity: 0.8=
+; }
+
+.highlight:not(:hover) .copybutton:not(.active) { opacity: 0.7; }
+
+.desc-section > .section-header { position: relative; }
+
+.desc-section-1 > .section-header { margin: 0.8em 0px; border-bottom: 1px d=
+otted rgb(132, 166, 199); color: rgb(132, 166, 199); }
+
+.desc-section-2 > .section-header { color: rgb(132, 166, 199); }
+
+.desc-section > .section-header::before { content: attr(data-nested-label);=
+ font-size: 0.75em; opacity: 0.75; letter-spacing: 1px; font-style: italic;=
+ }
+
+dl.object > dt, dl.data > dt, dl.function > dt, dl.method > dt, dl.attribut=
+e > dt, dl.class > dt, dl.exception > dt, dl.classmethod > dt, dl.staticmet=
+hod > dt { display: inline-block; padding: 0.3em 1em 0.3em 0.6em; border-st=
+yle: solid; border-color: rgba(0, 0, 0, 0.1); border-image: initial; border=
+-width: 0px 0px 0px 3px; border-radius: 3px; }
+
+dl.has-headerlink > dt, dl.has-headerlink > dt { padding-right: 0px; }
+
+dl.object > dt, dl.data > dt, dl.attribute > dt { background-color: rgb(230=
+, 230, 230); }
+
+dl.function > dt, dl.method > dt, dl.classmethod > dt, dl.staticmethod > dt=
+ { background-color: rgb(222, 235, 245); }
+
+dl.class > dt { background-color: rgb(238, 227, 206); border-width: 0px 0px=
+ 0px 6px; }
+
+dl.exception > dt { background-color: rgb(238, 227, 206); }
+
+dl.object > dt::before, dl.data > dt::before, dl.function > dt::before, dl.=
+method > dt::before, dl.attribute > dt::before, dl.class > dt > .property:f=
+irst-child, dl.exception > dt > .property:first-child, dl.classmethod > dt =
+> .property:first-child, dl.method[subtype] > dt > .property:first-child, d=
+l.staticmethod > dt > .property:first-child { font-size: 0.8em; font-weight=
+: bold; font-style: italic; letter-spacing: 0.1em; color: rgba(0, 0, 0, 0.3=
+); }
+
+.desc-section dl.attribute > dt::before { content: "attr"; padding-right: 0=
+.6em; }
+
+.desc-section dl.function > dt::before { content: "func"; padding-right: 0.=
+6em; }
+
+.desc-section dl.method:not([subtype]) > dt::before { content: "method"; pa=
+dding-right: 0.6em; }
+
+dl > dt.highlighted { background: rgb(251, 229, 78); }
+
+.viewcode-link { position: absolute; right: 0px; margin-right: calc(1em + 1=
+0px); }
+
+table.indextable span.category { font-size: 80%; font-style: italic; color:=
+ rgb(132, 173, 190); }
+
+table.indextable a, table.indextable a:hover span.category { color: rgb(0, =
+52, 105); }
+
+table.indextable span.category span.location { font-weight: bold; }
+
+table.indextable td > dl > dt { margin-bottom: 0.5em; }
+
+table.indextable td > dl > dd > dl { margin-top: -0.5em; margin-bottom: 0.5=
+em; }
+
+@media only screen and (min-device-width: 16in) {
+}
+
+@media only screen and (min-width: 11.5in) {
+}
+
+@media only screen and (min-width: 700px) {
+  .show-for-small { display: none !important; }
+}
+
+@media only screen and (max-width: 11.5in), only screen and (max-width: 700=
+px), only screen and (max-device-width: 700px), handheld {
+  body { margin: 0px; }
+  div.relbar-top div.related, div.relbar-bottom div.related { border-radius=
+: 0px; }
+  div.bodywrapper { margin: 0px 0px 0px 2.5in; }
+  div.sphinxsidebar { width: 2.5in; }
+  .sidebar-toggle-group { width: 2.5in; }
+}
+
+@media only screen and (max-width: 700px), only screen and (max-device-widt=
+h: 700px), handheld {
+  body { font-size: 75%; }
+  div.related > ul > li.right + li:not(.right) { font-weight: bold; }
+  div.related > ul > li:not(.right) + li { display: none; }
+  div.bodywrapper { margin-left: 0px; }
+  div.document:not(.document-hidden) div.sphinxsidebar, div.document.docume=
+nt-hidden div.documentwrapper { display: none; }
+  div.document.document-hidden div.sphinxsidebar { width: 100%; margin: 0px=
+; border: 0px; border-radius: 0px; }
+  button#sidebar-hide { left: auto; top: 0px; right: 0px; background: rgb(2=
+55, 255, 255); border-color: rgba(0, 0, 0, 0.15); }
+  div.body h2, div.body p.rubric, .section.emphasize-children > .section > =
+h3 { padding-top: 0.25em; padding-bottom: 0.25em; border-radius: 3px; }
+  .hide-for-small { display: none; }
+}
+
+@media print {
+  div.body { border: 0px; box-shadow: none; }
+  .sidebar-toggle-group { display: none; }
+  div.body h1, div.body h2, div.body p.rubric, div.body h3, div.body h4, di=
+v.body h5, div.body h6 { padding: 0px; color: rgb(51, 51, 51) !important; t=
+ext-shadow: none !important; border: none !important; }
+  .html-toggle.expanded > .html-toggle-button::after { display: none; }
+  .html-toggle.collapsed > .html-toggle-button::after { content: "[not prin=
+ted]" !important; }
+}
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pymbook.readthedocs.io/en/latest/_static/basic.css
+
+@charset "utf-8";
+
+div.clearer { clear: both; }
+
+div.related { width: 100%; font-size: 90%; }
+
+div.related h3 { display: none; }
+
+div.related ul { margin: 0px; padding: 0px 0px 0px 10px; list-style: none; =
+}
+
+div.related li { display: inline; }
+
+div.related li.right { float: right; margin-right: 5px; }
+
+div.sphinxsidebarwrapper { padding: 10px 5px 0px 10px; }
+
+div.sphinxsidebar { float: left; width: 2.5in; margin-left: -100%; font-siz=
+e: 90%; overflow-wrap: break-word; }
+
+div.sphinxsidebar ul { list-style: none; }
+
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points { margin-left: 20=
+px; list-style: square; }
+
+div.sphinxsidebar ul ul { margin-top: 0px; margin-bottom: 0px; }
+
+div.sphinxsidebar form { margin-top: 10px; }
+
+div.sphinxsidebar input { border: 1px solid rgb(152, 219, 204); font-family=
+: sans-serif; font-size: 1em; }
+
+div.sphinxsidebar #searchbox form.search { overflow: hidden; }
+
+div.sphinxsidebar #searchbox input[type=3D"text"] { float: left; width: 80%=
+; padding: 0.25em; box-sizing: border-box; }
+
+div.sphinxsidebar #searchbox input[type=3D"submit"] { float: left; width: 2=
+0%; border-left: none; padding: 0.25em; box-sizing: border-box; }
+
+img { border: 0px; max-width: 100%; }
+
+ul.search { margin: 10px 0px 0px 20px; padding: 0px; }
+
+ul.search li { padding: 5px 0px 5px 20px; background-image: url("file.png")=
+; background-repeat: no-repeat; background-position: 0px 7px; }
+
+ul.search li a { font-weight: bold; }
+
+ul.search li div.context { color: rgb(136, 136, 136); margin: 2px 0px 0px 3=
+0px; text-align: left; }
+
+ul.keywordmatches li.goodmatch a { font-weight: bold; }
+
+table.contentstable { width: 90%; margin-left: auto; margin-right: auto; }
+
+table.contentstable p.biglink { line-height: 150%; }
+
+a.biglink { font-size: 1.3em; }
+
+span.linkdescr { font-style: italic; padding-top: 5px; font-size: 90%; }
+
+table.indextable { width: 100%; }
+
+table.indextable td { text-align: left; vertical-align: top; }
+
+table.indextable ul { margin-top: 0px; margin-bottom: 0px; list-style-type:=
+ none; }
+
+table.indextable > tbody > tr > td > ul { padding-left: 0em; }
+
+table.indextable tr.pcap { height: 10px; }
+
+table.indextable tr.cap { margin-top: 10px; background-color: rgb(242, 242,=
+ 242); }
+
+img.toggler { margin-right: 3px; margin-top: 3px; cursor: pointer; }
+
+div.modindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+div.genindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+table.modindextable td { padding: 2px; border-collapse: collapse; }
+
+div.body { min-width: 450px; max-width: 800px; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { hyphens: auto; =
+}
+
+a.headerlink { visibility: hidden; }
+
+h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, =
+h4:hover > a.headerlink, h5:hover > a.headerlink, h6:hover > a.headerlink, =
+dt:hover > a.headerlink, caption:hover > a.headerlink, p.caption:hover > a.=
+headerlink, div.code-block-caption:hover > a.headerlink { visibility: visib=
+le; }
+
+div.body p.caption { text-align: inherit; }
+
+div.body td { text-align: left; }
+
+.first { margin-top: 0px !important; }
+
+p.rubric { margin-top: 30px; font-weight: bold; }
+
+img.align-left, .figure.align-left, object.align-left { clear: left; float:=
+ left; margin-right: 1em; }
+
+img.align-right, .figure.align-right, object.align-right { clear: right; fl=
+oat: right; margin-left: 1em; }
+
+img.align-center, .figure.align-center, object.align-center { display: bloc=
+k; margin-left: auto; margin-right: auto; }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-right { text-align: right; }
+
+div.sidebar { margin: 0px 0px 0.5em 1em; border: 1px solid rgb(221, 221, 18=
+7); padding: 7px 7px 0px; background-color: rgb(255, 255, 238); width: 40%;=
+ float: right; }
+
+p.sidebar-title { font-weight: bold; }
+
+div.topic { border: 1px solid rgb(204, 204, 204); padding: 7px 7px 0px; mar=
+gin: 10px 0px; }
+
+p.topic-title { font-size: 1.1em; font-weight: bold; margin-top: 10px; }
+
+div.admonition { margin-top: 10px; margin-bottom: 10px; padding: 7px; }
+
+div.admonition dt { font-weight: bold; }
+
+div.admonition dl { margin-bottom: 0px; }
+
+p.admonition-title { margin: 0px 10px 5px 0px; font-weight: bold; }
+
+div.body p.centered { text-align: center; margin-top: 25px; }
+
+table.docutils { border: 0px; border-collapse: collapse; }
+
+table.align-center { margin-left: auto; margin-right: auto; }
+
+table caption span.caption-number { font-style: italic; }
+
+table caption span.caption-text { }
+
+table.docutils td, table.docutils th { padding: 1px 8px 1px 5px; border-wid=
+th: 0px 0px 1px; border-top-style: initial; border-top-color: initial; bord=
+er-left-style: initial; border-left-color: initial; border-right-style: ini=
+tial; border-right-color: initial; border-bottom-style: solid; border-botto=
+m-color: rgb(170, 170, 170); }
+
+table.footnote td, table.footnote th { border: 0px !important; }
+
+th { text-align: left; padding-right: 5px; }
+
+table.citation { border-left: 1px solid gray; margin-left: 1px; }
+
+table.citation td { border-bottom: none; }
+
+div.figure { margin: 0.5em; padding: 0.5em; }
+
+div.figure p.caption { padding: 0.3em; }
+
+div.figure p.caption span.caption-number { font-style: italic; }
+
+div.figure p.caption span.caption-text { }
+
+table.field-list td, table.field-list th { border: 0px !important; }
+
+.field-list ul { margin: 0px; padding-left: 1em; }
+
+.field-list p { margin: 0px; }
+
+.field-name { hyphens: manual; }
+
+table.hlist td { vertical-align: top; }
+
+ol.arabic { list-style: decimal; }
+
+ol.loweralpha { list-style: lower-alpha; }
+
+ol.upperalpha { list-style: upper-alpha; }
+
+ol.lowerroman { list-style: lower-roman; }
+
+ol.upperroman { list-style: upper-roman; }
+
+dl { margin-bottom: 15px; }
+
+dd p { margin-top: 0px; }
+
+dd ul, dd table { margin-bottom: 10px; }
+
+dd { margin-top: 3px; margin-bottom: 10px; margin-left: 30px; }
+
+dt:target, span.highlighted { background-color: rgb(251, 229, 78); }
+
+rect.highlighted { fill: rgb(251, 229, 78); }
+
+dl.glossary dt { font-weight: bold; font-size: 1.1em; }
+
+.optional { font-size: 1.3em; }
+
+.sig-paren { font-size: larger; }
+
+.versionmodified { font-style: italic; }
+
+.system-message { background-color: rgb(255, 221, 170); padding: 5px; borde=
+r: 3px solid red; }
+
+.footnote:target { background-color: rgb(255, 255, 170); }
+
+.line-block { display: block; margin-top: 1em; margin-bottom: 1em; }
+
+.line-block .line-block { margin-top: 0px; margin-bottom: 0px; margin-left:=
+ 1.5em; }
+
+.guilabel, .menuselection { font-family: sans-serif; }
+
+.accelerator { text-decoration: underline; }
+
+.classifier { font-style: oblique; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+pre { overflow: auto hidden; }
+
+span.pre { hyphens: none; }
+
+td.linenos pre { padding: 5px 0px; border: 0px; background-color: transpare=
+nt; color: rgb(170, 170, 170); }
+
+table.highlighttable { margin-left: 0.5em; }
+
+table.highlighttable td { padding: 0px 0.5em; }
+
+div.code-block-caption { padding: 2px 5px; font-size: small; }
+
+div.code-block-caption code { background-color: transparent; }
+
+div.code-block-caption + div > div.highlight > pre { margin-top: 0px; }
+
+div.code-block-caption span.caption-number { padding: 0.1em 0.3em; font-sty=
+le: italic; }
+
+div.code-block-caption span.caption-text { }
+
+div.literal-block-wrapper { padding: 1em 1em 0px; }
+
+div.literal-block-wrapper div.highlight { margin: 0px; }
+
+code.descname { background-color: transparent; font-weight: bold; font-size=
+: 1.2em; }
+
+code.descclassname { background-color: transparent; }
+
+code.xref, a code { background-color: transparent; font-weight: bold; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { background-color: tr=
+ansparent; }
+
+.viewcode-link { float: right; }
+
+.viewcode-back { float: right; font-family: sans-serif; }
+
+div.viewcode-block:target { margin: -1px -10px; padding: 0px 10px; }
+
+img.math { vertical-align: middle; }
+
+div.body div.math p { text-align: center; }
+
+span.eqno { float: right; }
+
+span.eqno a.headerlink { position: relative; left: 0px; z-index: 1; }
+
+div.math:hover a.headerlink { visibility: visible; }
+
+@media print {
+  div.document, div.documentwrapper, div.bodywrapper { width: 100%; margin:=
+ 0px !important; }
+  div.sphinxsidebar, div.related, div.footer, #top-link { display: none; }
+}
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pymbook.readthedocs.io/en/latest/_static/pygments.css
+
+@charset "utf-8";
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(238, 255, 204); }
+
+.highlight .c { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cm { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cp { color: rgb(0, 112, 32); }
+
+.highlight .cpf { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .c1 { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cs { color: rgb(64, 128, 144); background-color: rgb(255, 240, =
+240); }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(255, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 160, 0); }
+
+.highlight .go { color: rgb(51, 51, 51); }
+
+.highlight .gp { color: rgb(198, 93, 9); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 112, 32); }
+
+.highlight .kr { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kt { color: rgb(144, 32, 0); }
+
+.highlight .m { color: rgb(32, 128, 80); }
+
+.highlight .s { color: rgb(64, 112, 160); }
+
+.highlight .na { color: rgb(64, 112, 160); }
+
+.highlight .nb { color: rgb(0, 112, 32); }
+
+.highlight .nc { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .no { color: rgb(96, 173, 213); }
+
+.highlight .nd { color: rgb(85, 85, 85); font-weight: bold; }
+
+.highlight .ni { color: rgb(213, 85, 55); font-weight: bold; }
+
+.highlight .ne { color: rgb(0, 112, 32); }
+
+.highlight .nf { color: rgb(6, 40, 126); }
+
+.highlight .nl { color: rgb(0, 32, 112); font-weight: bold; }
+
+.highlight .nn { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .nt { color: rgb(6, 40, 115); font-weight: bold; }
+
+.highlight .nv { color: rgb(187, 96, 213); }
+
+.highlight .ow { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(32, 128, 80); }
+
+.highlight .mf { color: rgb(32, 128, 80); }
+
+.highlight .mh { color: rgb(32, 128, 80); }
+
+.highlight .mi { color: rgb(32, 128, 80); }
+
+.highlight .mo { color: rgb(32, 128, 80); }
+
+.highlight .sa { color: rgb(64, 112, 160); }
+
+.highlight .sb { color: rgb(64, 112, 160); }
+
+.highlight .sc { color: rgb(64, 112, 160); }
+
+.highlight .dl { color: rgb(64, 112, 160); }
+
+.highlight .sd { color: rgb(64, 112, 160); font-style: italic; }
+
+.highlight .s2 { color: rgb(64, 112, 160); }
+
+.highlight .se { color: rgb(64, 112, 160); font-weight: bold; }
+
+.highlight .sh { color: rgb(64, 112, 160); }
+
+.highlight .si { color: rgb(112, 160, 208); font-style: italic; }
+
+.highlight .sx { color: rgb(198, 93, 9); }
+
+.highlight .sr { color: rgb(35, 83, 136); }
+
+.highlight .s1 { color: rgb(64, 112, 160); }
+
+.highlight .ss { color: rgb(81, 121, 24); }
+
+.highlight .bp { color: rgb(0, 112, 32); }
+
+.highlight .fm { color: rgb(6, 40, 126); }
+
+.highlight .vc { color: rgb(187, 96, 213); }
+
+.highlight .vg { color: rgb(187, 96, 213); }
+
+.highlight .vi { color: rgb(187, 96, 213); }
+
+.highlight .vm { color: rgb(187, 96, 213); }
+
+.highlight .il { color: rgb(32, 128, 80); }
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pymbook.readthedocs.io/_/static/css/badge_only.css
+
+@charset "utf-8";
+
+.fa::before { -webkit-font-smoothing: antialiased; }
+
+.clearfix { }
+
+.clearfix::before, .clearfix::after { display: table; content: ""; }
+
+.clearfix::after { clear: both; }
+
+@font-face { font-family: FontAwesome; font-weight: normal; font-style: nor=
+mal; src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-o=
+pentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("..=
+/fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawes=
+ome-webfont.svg#FontAwesome") format("svg"); }
+
+.fa::before { display: inline-block; font-family: FontAwesome; font-style: =
+normal; font-weight: normal; line-height: 1; text-decoration: inherit; }
+
+a .fa { display: inline-block; text-decoration: inherit; }
+
+li .fa { display: inline-block; }
+
+li .fa-large::before, li .fa-large::before { width: 1.875em; }
+
+ul.fas { list-style-type: none; margin-left: 2em; text-indent: -0.8em; }
+
+ul.fas li .fa { width: 0.8em; }
+
+ul.fas li .fa-large::before, ul.fas li .fa-large::before { vertical-align: =
+baseline; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.icon-book::before { content: "=EF=80=AD"; }
+
+.fa-caret-down::before { content: "=EF=83=97"; }
+
+.icon-caret-down::before { content: "=EF=83=97"; }
+
+.fa-caret-up::before { content: "=EF=83=98"; }
+
+.icon-caret-up::before { content: "=EF=83=98"; }
+
+.fa-caret-left::before { content: "=EF=83=99"; }
+
+.icon-caret-left::before { content: "=EF=83=99"; }
+
+.fa-caret-right::before { content: "=EF=83=9A"; }
+
+.icon-caret-right::before { content: "=EF=83=9A"; }
+
+.rst-versions { position: fixed; bottom: 0px; left: 0px; width: 300px; colo=
+r: rgb(252, 252, 252); background: rgb(31, 29, 29); font-family: Lato, prox=
+ima-nova, "Helvetica Neue", Arial, sans-serif; z-index: 400; }
+
+.rst-versions a { color: rgb(41, 128, 185); text-decoration: none; }
+
+.rst-versions .rst-badge-small { display: none; }
+
+.rst-versions .rst-current-version { padding: 12px; background-color: rgb(3=
+9, 37, 37); display: block; text-align: right; font-size: 90%; cursor: poin=
+ter; color: rgb(39, 174, 96); }
+
+.rst-versions .rst-current-version::before, .rst-versions .rst-current-vers=
+ion::after { display: table; content: ""; }
+
+.rst-versions .rst-current-version::after { clear: both; }
+
+.rst-versions .rst-current-version .fa { color: rgb(252, 252, 252); }
+
+.rst-versions .rst-current-version .fa-book { float: left; }
+
+.rst-versions .rst-current-version .icon-book { float: left; }
+
+.rst-versions .rst-current-version.rst-out-of-date { background-color: rgb(=
+231, 76, 60); color: rgb(255, 255, 255); }
+
+.rst-versions .rst-current-version.rst-active-old-version { background-colo=
+r: rgb(241, 196, 15); color: rgb(0, 0, 0); }
+
+.rst-versions.shift-up { height: auto; max-height: 100%; }
+
+.rst-versions.shift-up .rst-other-versions { display: block; }
+
+.rst-versions .rst-other-versions { font-size: 90%; padding: 12px; color: g=
+ray; display: none; }
+
+.rst-versions .rst-other-versions hr { display: block; height: 1px; border-=
+width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initi=
+al; border-left-style: initial; border-right-color: initial; border-bottom-=
+color: initial; border-left-color: initial; border-image: initial; margin: =
+20px 0px; padding: 0px; border-top-style: solid; border-top-color: rgb(65, =
+61, 61); }
+
+.rst-versions .rst-other-versions dd { display: inline-block; margin: 0px; =
+}
+
+.rst-versions .rst-other-versions dd a { display: inline-block; padding: 6p=
+x; color: rgb(252, 252, 252); }
+
+.rst-versions.rst-badge { width: auto; bottom: 20px; right: 20px; left: aut=
+o; border: none; max-width: 300px; }
+
+.rst-versions.rst-badge .icon-book { float: none; }
+
+.rst-versions.rst-badge .fa-book { float: none; }
+
+.rst-versions.rst-badge.shift-up .rst-current-version { text-align: right; =
+}
+
+.rst-versions.rst-badge.shift-up .rst-current-version .fa-book { float: lef=
+t; }
+
+.rst-versions.rst-badge.shift-up .rst-current-version .icon-book { float: l=
+eft; }
+
+.rst-versions.rst-badge .rst-current-version { width: auto; height: 30px; l=
+ine-height: 30px; padding: 0px 6px; display: block; text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .rst-versions { width: 85%; display: none; }
+  .rst-versions.shift { display: block; }
+}
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Noticia+Text:400,i,b,bi|Open+Sans:400,i,b,bi|Roboto+Mono:400,i,b,bi&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: "Noticia Text"; font-style: italic; font-weight: =
+400; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJodNDF2Yv9qppOePKYRP12YwtVn07tpQ.woff2") format("woff2"); unicode-ran=
+ge: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA=
+0-1EF9, U+20AB; }
+
+@font-face { font-family: "Noticia Text"; font-style: italic; font-weight: =
+400; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJodNDF2Yv9qppOePKYRP12YwtUn07tpQ.woff2") format("woff2"); unicode-ran=
+ge: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113=
+, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Noticia Text"; font-style: italic; font-weight: =
+400; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJodNDF2Yv9qppOePKYRP12Ywtan04.woff2") format("woff2"); unicode-range:=
+ U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2=
+074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Noticia Text"; font-style: italic; font-weight: =
+700; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJrdNDF2Yv9qppOePKYRP12YwPhulvdhDXUeA.woff2") format("woff2"); unicode=
+-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U=
++1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Noticia Text"; font-style: italic; font-weight: =
+700; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJrdNDF2Yv9qppOePKYRP12YwPhulvchDXUeA.woff2") format("woff2"); unicode=
+-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+=
+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Noticia Text"; font-style: italic; font-weight: =
+700; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJrdNDF2Yv9qppOePKYRP12YwPhulvShDU.woff2") format("woff2"); unicode-ra=
+nge: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F,=
+ U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Noticia Text"; font-style: normal; font-weight: =
+400; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJ2dNDF2Yv9qppOePKYRP12aTtYh0o.woff2") format("woff2"); unicode-range:=
+ U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1=
+EF9, U+20AB; }
+
+@font-face { font-family: "Noticia Text"; font-style: normal; font-weight: =
+400; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJ2dNDF2Yv9qppOePKYRP12aDtYh0o.woff2") format("woff2"); unicode-range:=
+ U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U=
++2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Noticia Text"; font-style: normal; font-weight: =
+400; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJ2dNDF2Yv9qppOePKYRP12ZjtY.woff2") format("woff2"); unicode-range: U+=
+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074=
+, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Noticia Text"; font-style: normal; font-weight: =
+700; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJpdNDF2Yv9qppOePKYRP1-3R5Nt2vQnDE.woff2") format("woff2"); unicode-ra=
+nge: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1E=
+A0-1EF9, U+20AB; }
+
+@font-face { font-family: "Noticia Text"; font-style: normal; font-weight: =
+700; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJpdNDF2Yv9qppOePKYRP1-3R5NtmvQnDE.woff2") format("woff2"); unicode-ra=
+nge: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+211=
+3, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Noticia Text"; font-style: normal; font-weight: =
+700; font-display: swap; src: url("https://fonts.gstatic.com/s/noticiatext/=
+v15/VuJpdNDF2Yv9qppOePKYRP1-3R5NuGvQ.woff2") format("woff2"); unicode-range=
+: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+=
+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,=
+ U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+21=
+16; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06F15M.woff2") f=
+ormat("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB=
+1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, =
+U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06F15M.woff2") f=
+ormat("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A=
+0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2") form=
+at("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2=
+DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2=
+215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,=
+ U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+21=
+16; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06F15M.woff2") f=
+ormat("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB=
+1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6F15M.woff2") f=
+ormat("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, =
+U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06F15M.woff2") f=
+ormat("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A=
+0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2") form=
+at("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2=
+DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2=
+215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2") form=
+at("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+=
+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2") form=
+at("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;=
+ }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2") form=
+at("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2") form=
+at("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2") form=
+at("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-=
+FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2") form=
+at("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1=
+A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2") form=
+at("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-2=
+0AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2") format=
+("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA=
+, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+221=
+5, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2") form=
+at("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+=
+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2") form=
+at("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116;=
+ }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2") form=
+at("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2") form=
+at("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2") form=
+at("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-=
+FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2") form=
+at("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1=
+A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2") form=
+at("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-2=
+0AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2") format=
+("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA=
+, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+221=
+5, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEluUlYIw.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEn-UlYIw.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEmOUlYIw.woff2=
+") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtElOUlYIw.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEleUlYIw.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEm-Ul.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEluUlYIw.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEn-UlYIw.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEmOUlYIw.woff2=
+") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtElOUlYIw.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEleUlYIw.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: italic; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xdDF4xlVMF-BfR8bXMIjhOsXG-q2oeuFoqFrlnAIe2Imhk1T8rbociImtEm-Ul.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSV0mf0h.woff2") =
+format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF=
+, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSx0mf0h.woff2") =
+format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2=
+116; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSt0mf0h.woff2") =
+format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSd0mf0h.woff2") =
+format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169,=
+ U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSZ0mf0h.woff2") =
+format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20=
+A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2") fo=
+rmat("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U=
++2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSV0mf0h.woff2") =
+format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF=
+, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSx0mf0h.woff2") =
+format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2=
+116; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSt0mf0h.woff2") =
+format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSd0mf0h.woff2") =
+format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169,=
+ U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSZ0mf0h.woff2") =
+format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20=
+A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Roboto Mono"; font-style: normal; font-weight: 7=
+00; font-display: swap; src: url("https://fonts.gstatic.com/s/robotomono/v2=
+2/L0xTDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtSM1J-gEPT5Ese6hmHSh0mQ.woff2") fo=
+rmat("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U=
++2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U=
++2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://pymbook.readthedocs.io/_/static/css/readthedocs-doc-embed.css
+
+@charset "utf-8";
+
+.rst-versions.rst-badge { display: block; bottom: 50px; height: auto; }
+
+.rst-other-versions { text-align: left; }
+
+.rst-other-versions a { border: 0px; }
+
+.rst-other-versions dl { margin: 0px; }
+
+.rtd-current-item { font-weight: bold; }
+
+.rst-content .line-block { margin-bottom: 24px; }
+
+nav.wy-nav-side { padding-bottom: 3em; }
+
+.bookmark-added-msg { display: none; }
+
+.bookmark-active { display: none; }
+
+.bookmark-inactive { display: none; }
+
+div.ethical-sidebar, div.ethical-footer { display: block !important; }
+
+.ethical-sidebar, .ethical-footer { padding: 0.5em; margin: 1em 0px; }
+
+.ethical-sidebar img, .ethical-footer img { width: 120px; height: 90px; dis=
+play: inline-block; }
+
+.ethical-sidebar .ethical-callout, .ethical-footer .ethical-callout { paddi=
+ng-top: 1em; clear: both; }
+
+.ethical-sidebar .ethical-pixel, .ethical-footer .ethical-pixel, .ethical-f=
+ixedfooter .ethical-pixel { display: none !important; }
+
+.ethical-sidebar .ethical-text, .ethical-footer .ethical-text { margin-top:=
+ 1em; }
+
+.ethical-sidebar .ethical-image-link, .ethical-footer .ethical-image-link {=
+ border: 0px; }
+
+.ethical-sidebar, .ethical-footer { background-color: rgb(238, 238, 238); b=
+order: 1px solid rgb(204, 204, 204); border-radius: 5px; color: rgb(10, 10,=
+ 10); font-size: 14px; line-height: 20px; }
+
+.ethical-sidebar ul { padding-left: 0px; list-style: none; margin: 0px !imp=
+ortant; }
+
+.ethical-sidebar ul li { display: inline-block; background-color: lightskyb=
+lue; color: black; padding: 0.25em 0.4em; font-size: 75%; font-weight: 700;=
+ margin: 0.25em; border-radius: 0.25rem; text-align: center; vertical-align=
+: baseline; white-space: nowrap; line-height: 1.41; }
+
+.ethical-sidebar ul li:not(:last-child) { margin-right: 0.25rem; }
+
+.ethical-sidebar a, .ethical-sidebar a:visited, .ethical-sidebar a:hover, .=
+ethical-sidebar a:active, .ethical-footer a, .ethical-footer a:visited, .et=
+hical-footer a:hover, .ethical-footer a:active { color: rgb(10, 10, 10); te=
+xt-decoration: none !important; border-bottom: 0px !important; }
+
+.ethical-callout a { color: rgb(112, 112, 112) !important; text-decoration:=
+ none !important; }
+
+.ethical-sidebar { text-align: center; max-width: 300px; margin-left: auto;=
+ margin-right: auto; }
+
+.ethical-footer { text-align: left; font-size: 14px; line-height: 20px; }
+
+.ethical-footer img { float: right; margin-left: 25px; }
+
+.ethical-footer .ethical-callout { text-align: center; }
+
+.ethical-footer small { font-size: 10px; }
+
+.ethical-fixedfooter { box-sizing: border-box; position: fixed; bottom: 0px=
+; left: 0px; z-index: 100; background-color: rgb(238, 238, 238); border-top=
+: 1px solid rgb(191, 191, 191); font-size: 12px; line-height: 1.5; padding:=
+ 0.5em 1.5em; text-align: center; color: rgb(64, 64, 64); width: 100vw; }
+
+@media (min-width: 769px) {
+  .ethical-fixedfooter { font-size: 13px; padding: 1em 1.5em; }
+}
+
+.ethical-fixedfooter .ethical-text::before { margin-right: 4px; padding: 2p=
+x 6px; border-radius: 3px; background-color: rgb(76, 175, 80); color: rgb(2=
+55, 255, 255); content: "Sponsored"; }
+
+.ethical-fixedfooter .ethical-callout { color: rgb(153, 153, 153); padding-=
+left: 6px; white-space: nowrap; }
+
+.ethical-fixedfooter a, .ethical-fixedfooter a:hover, .ethical-fixedfooter =
+a:active, .ethical-fixedfooter a:visited { color: rgb(64, 64, 64); text-dec=
+oration: none; }
+
+.ethical-fixedfooter .ethical-close { position: absolute; top: 0px; right: =
+5px; font-size: 20px; line-height: 20px; }
+
+.wy-nav-side .ethical-rtd { max-width: 300px; padding: 0px 1em; }
+
+.ethical-rtd .ethical-sidebar { color: rgb(179, 179, 179); font-size: 14px;=
+ line-height: 20px; }
+
+@media (min-width: 769px) {
+  .wy-body-for-nav .ethical-fixedfooter { padding-left: 300px; }
+}
+
+.ethical-alabaster a.ethical-image-link { border: 0px !important; }
+
+.ethical-alabaster hr { margin-top: 2em; }
+
+.ethical-alabaster::before { clear: both; content: ""; display: table; marg=
+in-top: 3em; }
+
+.ethical-dark-theme .ethical-sidebar { background-color: rgb(78, 75, 75); b=
+order: 1px solid rgb(160, 160, 160); color: rgb(194, 194, 194) !important; =
+}
+
+.ethical-dark-theme a, .ethical-dark-theme a:visited { color: rgb(230, 230,=
+ 230) !important; border-bottom: 0px !important; }
+
+.ethical-dark-theme .ethical-callout a { color: rgb(179, 179, 179) !importa=
+nt; }
+
+.keep-us-sustainable { padding: 0.5em; margin: 1em auto; text-align: center=
+; border: 1px dotted rgb(142, 204, 76); max-width: 300px; }
+
+.keep-us-sustainable a, .keep-us-sustainable a:hover, .keep-us-sustainable =
+a:visited { text-decoration: none; }
+
+.wy-nav-side .keep-us-sustainable { margin: 1em 2em 1em 1em; color: rgb(179=
+, 179, 179); }
+
+.wy-nav-side .keep-us-sustainable a { color: rgb(239, 239, 239); font-size:=
+ 14px; line-height: 20px; }
+
+.rtd_search_hits_spacing { margin: 10px 0px; }
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: image/webp
+Content-Transfer-Encoding: base64
+Content-Location: https://pymbook.readthedocs.io/en/latest/_static/pym.png
+
+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
+
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj----
+Content-Type: text/html
+Content-ID: <frame-5113A9D3982744100B9AF1120112DADD@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body></body></html>
+------MultipartBoundary--Cb4U1zzmEGp38utBctvkXNIF4c72xmMvQhePOCiODj------
